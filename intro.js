@@ -11,7 +11,7 @@ function edad (){
 }
 }
 
-// edad(); 
+edad(); 
 
 // //* function para pedir nombre 
 function usuario() {
@@ -26,10 +26,28 @@ function usuario() {
 usuario();
 /**function para pedir que va llevar */
 
-const cafeSolo = new Menu ("cafeSolo", "180");
-const capuchuno = new Menu ("capuchuno", "190");
-const conLeche = new Menu ("conLeche", "200");
-const submarino = new Menu ("submarino", "220");
+class Menu { 
+    constructor (variedad, precio){
+        this.variedad = variedad;
+        this.precio = precio;
+}
+/**en las clases puedo poner metodos sin this. */
+}
+const cafeSolo = new Menu ("cafeSolo", 180);
+const capuchino = new Menu ("capuchino", 190);
+const conLeche = new Menu ("conLeche", 200);
+const submarino = new Menu ("submarino", 220);
 
-console.log(cafeSolo);
-console.log(submarino);
+
+const listMenu = [];
+
+listMenu.push(cafeSolo, capuchino, conLeche, submarino
+    );
+
+
+for (let i = 0; i < 5; i++)[
+    console.log(listMenu[i])
+]
+
+
+
