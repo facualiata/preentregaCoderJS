@@ -45,9 +45,13 @@ listMenu.push(cafeSolo, capuchino, conLeche, submarino
     );
 
 
-for (let i = 0; i < 5; i++)[
+const pedido = prompt("ingrese su pedido \n coloque 0 para pedir cafe solo \n coloque 1 para pedir capuchino \n coloque 2 para pedir cafe con leche \n coloque 3 para pedir submarino");
+
+    console.log(listMenu[pedido]);
+
+for(let i = 0; i < listMenu.length; i++)[
     console.log(listMenu[i])
 ]
 
 
-
+// g
