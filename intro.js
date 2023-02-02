@@ -1,29 +1,29 @@
 /**
  * funcion para pedir edad
  */
-function edad (){
-    let edad = prompt("ingrese su edad ");
-    if(edad <= 17  ||  edad === ""){
-    while (edad <= 17 || edad === ""){
-        alert("usted es menor de edad");
-        edad = prompt("reingrese su edad ");
-        }
-    }
-}
+// function edad (){
+//     let edad = prompt("ingrese su edad ");
+//     if(edad <= 17  ||  edad === ""){
+//     while (edad <= 17 || edad === ""){
+//         alert("usted es menor de edad");
+//         edad = prompt("reingrese su edad ");
+//         }
+//     }
+// }
 
-edad(); 
+// edad(); 
 
-// //* function para pedir nombre 
-function usuario() {
-    let nombre = prompt("ingrese su nombre ");
-    if (nombre == ""){
-        alert("su nombre es invalido");
-        while(nombre == ""){
-            nombre = prompt("reingrese su nombre");
-        }
-    }else{alert("bienvenido " + nombre)}
-}
-usuario();
+// // //* function para pedir nombre 
+// function usuario() {
+//     let nombre = prompt("ingrese su nombre ");
+//     if (nombre == ""){
+//         alert("su nombre es invalido");
+//         while(nombre == ""){
+//             nombre = prompt("reingrese su nombre");
+//         }
+//     }else{alert("bienvenido " + nombre)}
+// }
+// usuario();
 /**function para pedir que va llevar */
 
 class MenuCafe { 
@@ -60,17 +60,13 @@ listaMenuComida.push(medialunas, facturas, tostados);
 
 const pedidoCafe = prompt("ingrese su pedido \n coloque 0 para pedir cafe solo \n coloque 1 para pedir capuchino \n coloque 2 para pedir cafe con leche \n coloque 3 para pedir submarino");
 
-    console.log(listMenuCafe[pedidoCafe]);
-
 const pedidoComida = prompt("ingrese su pedido \n coloque 0 para pedir medialunas \n coloque 1 para pedir facturas \n coloque 2 para pedir tostados");
 
-console.log(listaMenuComida[pedidoComida]);
+const pedido = [];
+pedido.push(pedidoCafe, pedidoComida);
+
+pedido.forEach((pedido)=> {
+    console.log("el precio es de: " + pedido.precio )
+})
 
 
-for(let i = 0; i < listMenuCafe.length; i++)[
-    console.log(listMenuCafe[i])
-]
-
-for (let i = 0; i < listaMenuComida.length; i++)[
-    console.log(listaMenuComida[i])
-]
