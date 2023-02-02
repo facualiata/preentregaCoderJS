@@ -1,29 +1,29 @@
 /**
  * funcion para pedir edad
  */
-// function edad (){
-//     let edad = prompt("ingrese su edad ");
-//     if(edad <= 17  ||  edad === ""){
-//     while (edad <= 17 || edad === ""){
-//         alert("usted es menor de edad");
-//         edad = prompt("reingrese su edad ");
-//         }
-//     }
-// }
+function edad (){
+    let edad = prompt("ingrese su edad ");
+    if(edad <= 17  ||  edad === ""){
+    while (edad <= 17 || edad === ""){
+        alert("usted es menor de edad");
+        edad = prompt("reingrese su edad ");
+        }
+    }
+}
 
-// edad(); 
+edad(); 
 
 // // //* function para pedir nombre 
-// function usuario() {
-//     let nombre = prompt("ingrese su nombre ");
-//     if (nombre == ""){
-//         alert("su nombre es invalido");
-//         while(nombre == ""){
-//             nombre = prompt("reingrese su nombre");
-//         }
-//     }else{alert("bienvenido " + nombre)}
-// }
-// usuario();
+function usuario() {
+    let nombre = prompt("ingrese su nombre ");
+    if (nombre == ""){
+        alert("su nombre es invalido");
+        while(nombre == ""){
+            nombre = prompt("reingrese su nombre");
+        }
+    }else{alert("bienvenido " + nombre)}
+}
+usuario();
 /**function para pedir que va llevar */
 
 class MenuCafe { 
