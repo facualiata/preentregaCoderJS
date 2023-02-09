@@ -11,7 +11,7 @@ function edad (){
     }
 }
 
-edad(); 
+// edad(); 
 
 // // //* function para pedir nombre 
 function usuario() {
@@ -23,50 +23,88 @@ function usuario() {
         }
     }else{alert("bienvenido " + nombre)}
 }
-usuario();
+// usuario();
 /**function para pedir que va llevar */
 
-class MenuCafe { 
+class Menu { 
     constructor (variedad, precio){
         this.variedad = variedad;
         this.precio = precio;
     }
 }
-class MenuComida {
-    constructor(variedad, precio){
-        this.variedad = variedad;
-        this.precio = precio;
-    }
+const cafeSolo = new Menu ("cafeSolo", 180);
+const capuchino = new Menu ("capuchino", 190);
+const conLeche = new Menu ("conLeche", 200);
+const submarino = new Menu ("submarino", 220);
+const medialunas = new Menu("medialunas", 30);
+const facturas = new Menu ("facturas", 30);
+const tostados = new Menu("tostados", 50);
+
+const productos = [];
+
+productos.push(cafeSolo, capuchino, conLeche, submarino, medialunas, facturas, tostados  );
+
+let carrito = [];
+
+let seleccion = prompt("desea comprar un producto?")
+
+while(seleccion != "si" && seleccion != "no"){
+    alert("Por favor diga si o no")
+    seleccion = prompt("desea compra algo?")
 }
 
-const cafeSolo = new MenuCafe ("cafeSolo", 180);
-const capuchino = new MenuCafe ("capuchino", 190);
-const conLeche = new MenuCafe ("conLeche", 200);
-const submarino = new MenuCafe ("submarino", 220);
-////
+if(seleccion == "si"){
+    alert("a continuacion nuestra lista de productos")
+    let tdsLosProductos = productos.map((producto) => producto.variedad + " " + producto.precio + "$")
+    alert(tdsLosProductos.join(" - "))
+}else if(seleccion == "no"){
+    alert("gracias por venir!")
+}
 
-const medialunas = new MenuComida("medialunas", 30);
-const facturas = new MenuComida ("facturas", 30);
-const tostados = new MenuComida("tostados", 50);
+while(seleccion != "no"){
+    let productos = prompt("agrega un producto a tu carrito")
+    let precio = 0;
+    if (productos == "cafeSolo" || productos == "capuchino" || precio == "conLeche" || productos == "submarino" || productos == "medialunas" || productos == "facturas" || productos == "tostados") {
+        switch(productos) {
+            case "cafeSolo":
+                precio = 180
+            break
+            case "capuchino":
+            precio = 190
+            break
+            case "conLeche":
+            precio = 200
+            break
+            case "submarino":
+            precio = 220
+            break
+            case "medialunas":
+            precio = 30
+            break
+            case "facturas":
+            precio = 30
+            break
+            case "tostados":
+            precio = 50
+            break
+            default:
+            break
+        }        
+        let unidades = parseInt(prompt("cuantas unidades quiere llevar?"))
 
-const listMenuCafe = [];
-const listaMenuComida = [];
+        carrito.push({ productos,unidades, precio})
+        console.log(carrito)
+    }else(alert("no tenemos ese producto"))
 
-listMenuCafe.push(cafeSolo, capuchino, conLeche, submarino
-    );
+    seleccion = prompt("desea seguir comprando?")
 
-listaMenuComida.push(medialunas, facturas, tostados);
-
-
-const pedidoCafe = prompt("ingrese su pedido \n coloque 0 para pedir cafe solo \n coloque 1 para pedir capuchino \n coloque 2 para pedir cafe con leche \n coloque 3 para pedir submarino");
-
-const pedidoComida = prompt("ingrese su pedido \n coloque 0 para pedir medialunas \n coloque 1 para pedir facturas \n coloque 2 para pedir tostados");
-
-const pedido = [];
-pedido.push(pedidoCafe, pedidoComida);
-
-pedido.forEach((pedido)=> {
-    console.log("el precio es de: " + pedido.precio )
-})
-
-
+    while(seleccion == "no"){
+        alert("gracias por su compra, hasta pronto! ")
+        carrito.forEach((carritoFinal) => {
+            console.log(` producto: ${carritoFinal.productos}, unidades: ${carritoFinal.unidades} total a pagar por producto: ${carritoFinal.unidades * carritoFinal.precio}`)
+        })
+        break
+    }
+} 
+// const total = carrito.reduce((acc, el) => acc + el.precio + el.unidades, 0)
+// console.log(`el total a pagar por su compra es: ${total} `)
