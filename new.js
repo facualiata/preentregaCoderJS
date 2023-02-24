@@ -83,6 +83,13 @@ function renderizarProductos(productos){
         const button = document.createElement("button");
         button.innerHTML = "agregar al carrito";
         button.addEventListener("click",() => {
+            Toastify({
+                text: "Agregado al carrito",
+                duration: 3000,
+                gravity:`botton`,
+                position:`left`,
+            }) .showToast();
+
             agregarAlCarrito(producto);
         })
 
