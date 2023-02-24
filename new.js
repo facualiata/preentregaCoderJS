@@ -1,5 +1,3 @@
-
-
 const contenedor= document.getElementById("contenedor");
 const contenedorCarrito= document.getElementById("contenedorCarrito")
 
@@ -38,8 +36,6 @@ function agregarAlCarrito (producto){
     agregarCarritoAlLS();
 };
 
-
-
 function renderizarCarrito(productos){
     contenedorCarrito.innerHTML="";
     for(const producto of productos){
@@ -59,9 +55,16 @@ function renderizarCarrito(productos){
 
         contenedorCarrito.append(divCarrito)
     };
-    
+    renderizarTotal();
 };
 
+function renderizarTotal(){
+
+    const total = carrito.reduce( (acc,productoCarrito)=>{
+        return acc + (productoCarrito.precio * productoCarrito.cantidad)
+    }, 0 );
+    totalSpan.innerHTML= `$${total}`
+};
 
 function renderizarProductos(productos){
     
@@ -89,11 +92,9 @@ function renderizarProductos(productos){
     };
 };
 
-
-
+const totalSpan = document.querySelector("#total span");
 
 //traigo los productos del archivo json//
-
 
 fetch("/productos.json")
 .then((response)=>{

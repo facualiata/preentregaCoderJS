@@ -1,8 +1,34 @@
-.menu{
-    text-decoration: none;
-    
-    color: green;
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
 }
-.contenedor{
-    text-decoration: none;
+
+.contentCarrito{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
 }
+.carrito{
+    margin: 1px solid black;
+    padding-left: 20px;
+
+}
+
+
+.productos{
+    padding: 0.5rem;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 1rem;
+};
+
+
+
