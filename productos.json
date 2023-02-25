@@ -1,0 +1,34 @@
+    [
+    {
+        "nombre":"cafeSolo",
+        "precio":180
+    },
+    {
+        "nombre":"capuchino",
+        "precio": 190
+    },
+    {
+        "nombre":"submarino",
+        "precio":200
+    },
+    {
+        "nombre":"teNegro",
+        "precio":160
+    },
+    {
+        "nombre":"medialunas",
+        "precio":30
+    },
+    {
+        "nombre":"facturas",
+        "precio":30
+    },
+    {
+        "nombre":"tostados",
+        "precio":60
+    },
+    {
+        "nombre":"bizcochos",
+        "precio":50
+    }
+]
